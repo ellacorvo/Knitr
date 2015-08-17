@@ -6,29 +6,25 @@
 	var projectCount = 0;
 
 //class constructors for Yarns and Projects
-	var Yarn = function(weight, yards, needlesize, color, yarnId) {
-		this.weight      = weight;
+	var Yarn = function(yards, color, yarnId) {
 		this.yards       = yards;
-		this.needlesize  = needlesize;
 		this.color       = color;
 		this.id 		 = yarnId;
 	}
 
-	var Project = function(name, weight, yards, needlesize, projectId) {
-		this.name       = name;
-		this.weight     = weight;
+	var Project = function(name, yards, projectId) {
+		this.name       = name;;
 		this.yards      = yards;
-		this.needlesize = needlesize;
 		this.id         = name || projectId;
 	}
 //prototype methods to create HTML and text elements
 	Yarn.prototype.create = function() {
-		var newYarn = $('<div id=' + this.id + ' class="newDiv margin10"><ul><li>Weight: ' + this.weight + ' </li><li> Yards: ' + this.yards + ' </li><li> Needle Size: ' + this.needlesize + '</li><li>Color: ' + this.color + '</li><ul></div>');
+		var newYarn = $('<div id=' + this.id + ' class="newDiv margin10"><ul><li> Yards: ' + this.yards + ' </li><li>Color: ' + this.color + '</li><ul></div>');
 		return newYarn;
 	}
 
 	Project.prototype.create = function() {
-		var newProject = $('<div id=' + this.id + ' class="newDiv margin10"><ul><li>Name: '  + this.name + ' </li><li> Weight: ' + this.weight + ' </li><li> Yards: ' + this.yards + ' </li><li> Needle Size: ' + this.needlesize + '</li><ul></div>');
+		var newProject = $('<div id=' + this.id + ' class="newDiv margin10"><ul><li>Name: '  + this.name + ' </li><li> Yards: ' + this.yards + ' </li><ul></div>');
 		return newProject;
 	};
 //click handler for yarn form that creates new instance of yarn class, pushes it to the array, and appends it to the DOM
@@ -36,13 +32,11 @@
 		yarnCount++; //counter creates a unique id for each instance created
 
 		var yarnId = yarnCount;
-		var newWeight = $("#weight").val();
 		var newYards = $("#yards").val();
-		var newNeedles = $("#needles").val();
 		var newColor = $("#color").val();
 		var photo = $('#yarnPic').val();
 		//create yarn instance
-		var newYarnEntry = new Yarn(newWeight, newYards, newNeedles, newColor, yarnId);
+		var newYarnEntry = new Yarn(newYards, newColor, yarnId);
 		//assign defult photo if no link is input in form
 		if (photo === "") {
 			photo = "http://cdn.surfnetkids.com/coloring/images/ball_of_yarn.jpg";
@@ -65,12 +59,10 @@
 
 		var projectId = projectCount;
 		var projectName = $('#p-name').val();
-		var pWeight = $("#p-weight").val();
 		var pYards = $("#p-yards").val();
-		var pNeedles = $("#p-needles").val();
 		var pPhoto = $('#projectPic').val();
 		//create project instance
-		var newProjectEntry = new Project(projectName, pWeight, pYards, pNeedles, projectId);
+		var newProjectEntry = new Project(projectName, pYards, projectId);
 		//assign defult photo if no link is input in form
 		if (pPhoto === "") {
 			pPhoto = "http://thumbs.dreamstime.com/x/sheep-knitted-sweater-hand-drawn-illustration-46213087.jpg";

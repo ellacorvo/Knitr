@@ -15,15 +15,11 @@ block content
           h3 Yarn Stash
           button.btn.btn-default.navbar-btn.yarn-form-button(type='submit') Add a new yarn to your stash
           .yarn-form-container
-            form.yarn-form
+            form.yarn-form(action="/yarns" method="POST")
               .form-group
-                input#weight.form-control(type='text', placeholder='Yarn Weight')
+                input#yards.form-control(name="yards", type='text', placeholder='Yards')
               .form-group
-                input#yards.form-control(type='text', placeholder='Yards')
-              .form-group
-                input#needles.form-control(type='text', placeholder='Recommended Needle-Size')
-              .form-group
-                input#color.form-control(type='text', placeholder='Color')
+                input#color.form-control(name="color", type='text', placeholder='Color')
               .form-group
                 label Link an image file
                 input#yarnPic.form-control(type='text', placeholder='Link to Image')
@@ -34,15 +30,11 @@ block content
           h3 Projects
           button.btn.btn-default.navbar-btn.project-form-button(type='submit') Add a new project to your queue
           .project-form-container
-            form.project-form
+            form.project-form(action="/projects" method="POST")
               .form-group
-                input#p-name.form-control(type='text', placeholder='Project Name')
+                input#p-name.form-control(name="name", type='text', placeholder='Project Name')
               .form-group
-                input#p-weight.form-control(type='text', placeholder='Yarn Weight')
-              .form-group
-                input#p-yards.form-control(type='text', placeholder='Yards Required')
-              .form-group
-                input#p-needles.form-control(type='text', placeholder='Recommended Needle-Size')
+                input#p-yards.form-control(name="yards", type='text', placeholder='Yards Required')
               .form-group
                 label Link an image file
                 input#projectPic.form-control(type='text', placeholder='Link to Image')
