@@ -1,4 +1,58 @@
 extends layout
 
 block content
-	h1 Hello Boulder!
+    .container.col-xs-12.title.bar.mini-padding
+      h2.col-xs-4.text-padding Search your yarn stash!
+    .col-xs-12.grey
+      .container.jumbo-padding
+        h2.header-text Knitting Project Search
+        p.lead
+          | Store your yarns and projects, automatically search through yarns you already have to see what you can use for a new project.
+        a.btn.btn-default.ravelry(href='http://www.ravelry.com/', role='button')
+    div
+      .row
+        .col-xs-12.col-md-4.rounded-background.text-padding.border
+          h3 Yarn Stash
+          button.btn.btn-default.navbar-btn.yarn-form-button(type='submit') Add a new yarn to your stash
+          .yarn-form-container
+            form.yarn-form
+              .form-group
+                input#weight.form-control(type='text', placeholder='Yarn Weight')
+              .form-group
+                input#yards.form-control(type='text', placeholder='Yards')
+              .form-group
+                input#needles.form-control(type='text', placeholder='Recommended Needle-Size')
+              .form-group
+                input#color.form-control(type='text', placeholder='Color')
+              .form-group
+                label Link an image file
+                input#yarnPic.form-control(type='text', placeholder='Link to Image')
+                p.help-block Link to a snapshot of your yarn here.
+              button.btn.btn-primary(type='submit') Add this yarn!
+          #stash-container.stash-container.mini-padding
+        .col-xs-12.col-md-4.rounded-background.text-padding.border
+          h3 Projects
+          button.btn.btn-default.navbar-btn.project-form-button(type='submit') Add a new project to your queue
+          .project-form-container
+            form.project-form
+              .form-group
+                input#p-name.form-control(type='text', placeholder='Project Name')
+              .form-group
+                input#p-weight.form-control(type='text', placeholder='Yarn Weight')
+              .form-group
+                input#p-yards.form-control(type='text', placeholder='Yards Required')
+              .form-group
+                input#p-needles.form-control(type='text', placeholder='Recommended Needle-Size')
+              .form-group
+                label Link an image file
+                input#projectPic.form-control(type='text', placeholder='Link to Image')
+                p.help-block Link to the path of your project here.
+              button.submit-project.btn.btn-primary(type='submit') Add this project!
+          .projects-container.mini-padding
+        .col-xs-12.col-md-4.rounded-background.text-padding.border
+          h3 Search Results:
+          button.clear.btn.btn-default.navbar-btn(type='submit') Clear Results
+          .search-container.mini-padding
+    .col-xs-offset-1.col-xs-10.line.mini-padding
+    .col-xs-offset-5.col-xs-12.mini-padding.white
+      h4 © Lauren Shugrue 2015
