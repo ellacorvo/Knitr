@@ -51,6 +51,7 @@
 		//hide form after submitting entry
 		$('.yarn-form-container').hide(500);
 		return false;
+
 	});
 
 //click handler for project form that creates new instance of yarn class, pushes it to the array, and appends it to the DOM

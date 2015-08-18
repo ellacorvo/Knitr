@@ -5,6 +5,6 @@ var applySchema = mongoose.Schema({
    color    : {type: String}
 });
 
-var Yarn = mongoose.model('yarn', applySchema);
+var Yarn = mongoose.model('yarns', applySchema);
 
 module.exports = Yarn;

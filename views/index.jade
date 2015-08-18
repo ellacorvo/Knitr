@@ -15,7 +15,7 @@ block content
           h3 Yarn Stash
           button.btn.btn-default.navbar-btn.yarn-form-button(type='submit') Add a new yarn to your stash
           .yarn-form-container
-            form.yarn-form(action="/yarns" method="POST")
+            form.yarn-form(action="/yarns" method="post")
               .form-group
                 input#yards.form-control(name="yards", type='text', placeholder='Yards')
               .form-group
@@ -30,7 +30,7 @@ block content
           h3 Projects
           button.btn.btn-default.navbar-btn.project-form-button(type='submit') Add a new project to your queue
           .project-form-container
-            form.project-form(action="/projects" method="POST")
+            form.project-form(action="/projects" method="post")
               .form-group
                 input#p-name.form-control(name="name", type='text', placeholder='Project Name')
               .form-group

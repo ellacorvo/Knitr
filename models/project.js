@@ -5,6 +5,6 @@ var applySchema = mongoose.Schema({
    yards   : {type: String}
 });
 
-var Project = mongoose.model('project', applySchema);
+var Project = mongoose.model('projects', applySchema);
 
 module.exports = Project;

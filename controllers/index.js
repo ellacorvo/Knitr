@@ -10,8 +10,8 @@ var indexController = {
             res.send(yarn)
         });	
 	},
-    create : function(req, res){
-        var yarn = new yarn(req.body);
+    createYarn : function(req, res){
+        var yarn = new Yarn(req.body);
         yarn.save(function(err, yarn){
             res.send(yarn)
         });
