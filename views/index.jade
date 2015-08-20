@@ -1,18 +1,8 @@
 extends layout
 
 block content
-    a#menu-toggle.btn.btn-dark.btn-lg.toggle(href='#')
-      i.fa.fa-bars
-    nav#sidebar-wrapper
-      ul.sidebar-nav
-        a#menu-close.btn.btn-light.btn-lg.pull-right.toggle(href='#')
-          i.fa.fa-times
-        li.sidebar-brand
-          a(href='#top', onclick='$("#menu-close").click();') Welcome to knitr!
-        li
-          a(href='#top', onclick='$("#menu-close").click();') Home
-        li
-          a(href='#about', onclick='$("#menu-close").click();') About
+    a#menu-toggle.btn.btn-dark.btn-lg(href='#') Home
+
     header#top.header
       .text-vertical-center
         h1 knitr
